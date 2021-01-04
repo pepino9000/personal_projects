@@ -1,0 +1,27 @@
+
+/*Paleta de colores
+"#4D8282"
+"#464F4F"
+"#203636"
+"#748282"
+"#7ACFCF"
+"#1E3333"    */
+
+.bg-steel{
+  background-color: #203636;
+  color: white;
+}
+.bg-steel a{
+  color: white;
+}
+body{
+  font-family:'Poppins', sans-serif;
+}
+.cover{
+  height: 400px;
+  object-fit: cover;
+  object-position: top;
+}
+.subtitle{
+  text-align: center;
+}
