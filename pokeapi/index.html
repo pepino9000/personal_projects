@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar bg-steel">
+      <div class="container-fluid">
+        <h4 class="text-center my-2">PokeAPI</h4>
+        <p class="text-center m-auto">Un ejemplo de consulta de API con AJAX, gráficos de CANVAS y JQUERY</p>
+      </div>
+    </nav>
+
+  <div class="container p-5 mt-4 pokedexContainer">
+    <div class="row mb-3">
+      <div class='col-12 col-md-3'>
+        <p class="my-2">Ingrese número de pokemón</p>
+      </div>
+      <div class="col-12 col-md-9">
+        <form for="inputEmail3" action="index.html" method="post" class='form'>
+            <input type="number" class="form-control" id="pokeId">
+            <button type="submit" name="button" id="pokedexOn" type="button" class="btn btn-danger">BUSCAR</button>
+        </form>
+      </div>
+    </div>
+    <div class="row">
+      <div class='class="col-12 col-md-4 m-auto'>
+        <img src="" alt="">
+        <br>        
+        <br>
+        <div class='datos'></div>
+      </div>
+      <div class="col-12 col-md-8" id="chartContainer" style="height: 370px; width: 100%;"></div>
+    </div>
+  </div>
+
+  
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js" charset="utf-8"></script>
+
+</body>
+</html>
