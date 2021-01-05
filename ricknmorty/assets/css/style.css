@@ -9,7 +9,13 @@ body {
   height: 100vh;
   color: white;
 }
-
+.bg-steel{
+  color: white;
+  background-color: #203636;
+}
+.bg-steel a{
+  color: white;
+}
 .resultados img {
   border-radius: 50%;
   padding: 10px;
@@ -85,4 +91,8 @@ ul li span {
   text-decoration: none;
   cursor: pointer;
 }
-
+.turn{
+  padding: 5px;
+  height: 40px;
+  margin-right: 50px;
+}
