@@ -13,8 +13,8 @@ $(function (){
   
       $.ajax(settings).done(function(response){
         $('#name').text(response.name)
-        $('img').attr('src', response.sprites['front_default'])
-        $('img').attr('class', 'pokeFoto')
+        $('#sprite').attr('src', response.sprites['front_default'])
+        $('#sprite').attr('class', 'pokeFoto')
         $('.datos').empty()
         $('.datos').append(`<p class='number ib'>N° ${pokeId.value}&nbsp&nbsp&nbsp<br></p><p class='name ib'>${response.name}</p><br>`)
         response.types.forEach(element => {
