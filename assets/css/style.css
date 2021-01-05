@@ -4,11 +4,25 @@
 "#464F4F"
 "#203636"
 "#748282"
-"#7ACFCF"
+"#"
 "#1E3333"    */
-
+html {
+  scroll-behavior: smooth;
+}
+a{
+  text-decoration: none;
+}
 .bg-steel{
   background-color: #203636;
+  color: #748282;
+}
+.btn-steel{
+  background: linear-gradient(180deg, rgba(122,207,207,1) 79%, rgba(15,113,125,1) 100%);
+    color: #203636;
+  font-weight: 500;
+  border: #203636 solid 3px;
+}
+.btn:hover{
   color: white;
 }
 .bg-steel a{
@@ -16,6 +30,59 @@
 }
 body{
   font-family:'Poppins', sans-serif;
+}
+h2{
+  color: #4D8282;
+  padding-top:35px;
+  padding-left: 11%;
+  font-size: 35px;
+  text-align: left;
+  font-weight: 700;
+}
+.pokeapi{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.pokeapi > h5{
+  text-align: center;
+}
+.box{
+  border: #748282 solid 3px;
+  padding: 15px;
+  margin: 5px;
+  height: 100%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: white;
+  border-radius: 20px;
+
+}
+.box--img img{
+  align-items: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.box h3{
+  font-size: 18px;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 500;
+  color: #464F4F;
+}
+.box p{
+  text-align: center;
+  font-size: 14px;
+}
+.pokeapi--img{
+  height: auto;
+  margin: auto;
+}
+.widderbtn{
+  padding-left: 15px;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
 }
 .cover{
   height: 400px;

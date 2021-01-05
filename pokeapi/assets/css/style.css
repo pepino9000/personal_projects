@@ -21,7 +21,11 @@
   display: flex;
   width: 90%;
 }
-
+.turn{
+  padding: 5px;
+  height: 40px;
+  margin-right: 50px;
+}
 .pokedexContainer {
   border: solid 3px #aa150a;
   border-radius: 20px;

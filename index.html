@@ -37,7 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#pokeapi">PokeApi</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
@@ -55,100 +55,145 @@
         </div>
       </div>
     </nav>
-    <div class="container"></div>
-    <!-- <div
-      id="carouselExampleSlidesOnly"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active cover">
-          <img src="assets/img/hero1.jpg" class="d-block w-100" alt="..." />
-          <div class="carousel-caption d-none d-md-block">
-            <h1 class="mb-5">Portafolio de Bastián Besoaín</h1>
-            <h2 class="mb-5">Full stack Javascript Developer</h2>
+    <h2 id="pokeapi">POKEDEX api</h2>
+    <div class="container mt-3 mb-3">
+      <div class="row">
+        <div class="col-6 pokeapi">
+          <br />
+          <!-- <br>       
+          <p>Creación de pokedex conectada a la api https://pokeapi.co/.</p>
+            <p>El servidor cuenta con un formulario, que al ingresar un número llama los datos del pokemon en esa posición, mostrando:<br><br> Nombre, tipos y un gráfico dinámico con sus estadísticas (personalizado de https://canvasjs.com/).</p> -->
+          <div class="row">
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/api.PNG" alt="" />
+                </div>
+                <h3>Conexión a api</h3>
+                <p>
+                  Al ingresar un número, el programa hace un llamado a la api
+                  pokeapi.co, recibiendo la data del pokemon seleccionado.
+                </p>
+              </div>
+            </div>
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/grafico.PNG" alt="" />
+                </div>
+                <h3>Gráficos dinámicos</h3>
+                <p>
+                  Muestra las estadísticas de los pokemones través de un gráfico dinámica, utilizando canvasJS y los datos filtrados de la API.
+                </p>
+              </div>
+            </div>
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/css.PNG" alt="" />
+                </div>
+                <h3>Datos json</h3>
+                <p>
+                  Sitio web responsive diseñado con bootstrap y CSS3. 
+                  <br>Ciertos datos, como los tipos del pokemon, tienen un diseño personalizado. 
+                </p>
+              </div>
+            </div>
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/js.PNG" alt="" />
+                </div>
+                <h3>Javascript</h3>
+                <p>
+                  Utilizando javascript se llama a la api correspondiente, se almacenan los datos y se generan las etiquetas html que se muestran.
+                </p>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="col-6 pokeapi--img">
+          <a href="pokeapi/index.html"
+            ><img src="assets/img/2.png" alt="" class="col-6 w-100"
+          /></a>
+            <a href="pokeapi/index.html">
+              <button
+                type="button"
+                class="btn btn-steel widderbtn"
+              >
+                Demostración en línea
+              </button></a
+            >
         </div>
       </div>
-    </div> -->
-    <div class="container">
-      <h2 class="subtitle mt-5 mb-4">MIS TRABAJOS</h2>
-      <div class="row row-cols-1 row-cols-md-3 g-4">
-        <div class="col p-4">
-          <div class="card">
-            <a href="pokeapi/index.html"><img src="assets/img/pokeapi.PNG" class="card-img-top" alt="..." />
-            </a>
-            <div class="card-body">
-              <h5 class="card-title">Pokeapi</h5>
-              <p class="card-text">
-                Creación de pokedex conectada a la api https://pokeapi.co/.
-              </p>
-              <p>El servidor cuenta con un formulario, que al ingresar un número llama los datos del pokemon en esa posición, mostrando:<br><br> Nombre, tipos y un gráfico dinámico con sus estadísticas (personalizado de https://canvasjs.com/).</p>
+    </div>
+    <h2 id="pokeapi">Personajes de Rick and Morty</h2>
+    <div class="container mt-3 mb-3">
+      <div class="row">
+        <div class="col-6 pokeapi">
+          <br />
+          <!-- <br>       
+          <p>Creación de pokedex conectada a la api https://pokeapi.co/.</p>
+            <p>El servidor cuenta con un formulario, que al ingresar un número llama los datos del pokemon en esa posición, mostrando:<br><br> Nombre, tipos y un gráfico dinámico con sus estadísticas (personalizado de https://canvasjs.com/).</p> -->
+          <div class="row">
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/api.PNG" alt="" />
+                </div>
+                <h3>Conexión a api</h3>
+                <p>
+                  Con vanilla javascript se hace el llamado a los datos de la api https://rickandmortyapi.com/, con las que se crean los objetos.
+                </p>
+              </div>
+            </div>
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/poo.PNG" alt="" />
+                </div>
+                <h3>Programación orientada a objetos</h3>
+                <p>
+                  Con la data se crea un objeto por personaje, la que cuenta con una función que muestra los datos del objeto al hacer click en una imagen.
+                </p>
+              </div>
+            </div>
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/json.PNG" alt="" />
+                </div>
+                <h3>Diseño Personalizado</h3>
+                <p>
+                  Para este programa se utilizan datos en formato json, los que son convertidos y filtrados para ser compatibles con javascript.
+                </p>
+              </div>
+            </div>
+            <div class="col-6 p-3">
+              <div class="box">
+                <div class="box--img">
+                  <img src="assets/img/js.PNG" alt="" />
+                </div>
+                <h3>Javascript</h3>
+                <p>
+                  Utilizando javascript se llama a la api correspondiente, se almacenan los datos y se generan las etiquetas html que se muestran.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col p-4">
-          <div class="card">
-            <img src="assets/img/rickapi.PNG" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col p-4">
-          <div class="card">
-            <img src="assets/img/gitapi.PNG" class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Pokeapi</h5>
-              <p class="card-text">
-                Creación de pokedex conectada a la api https://pokeapi.co/.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col p-4">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col p-4">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col p-4">
-          <div class="card">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-            </div>
-          </div>
+        <div class="col-6 pokeapi--img">
+          <a href="ricknmorty/index.html"
+            ><img src="assets/img/3.png" alt="" class="col-6 w-100"
+          /></a>
+            <a href="ricknmorty/index.html">
+              <button
+                type="button"
+                class="btn btn-steel widderbtn"
+              >
+                Demostración en línea
+              </button></a
+            >
         </div>
       </div>
     </div>
