@@ -76,7 +76,7 @@ export default class DetallesPersonajes extends Personajes{
     infoGeneral = async (resultados, imagen) =>{
         let img_id =  
         `<div class="col-2 image">
-            <img src="${imagen}" meta-id="${this.id}"></img>
+            <img src="${imagen}" meta-id="${this.id}" class='img-modal'></img>
             <br>
             <br>
         </div>

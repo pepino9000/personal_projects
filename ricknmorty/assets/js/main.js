@@ -15,7 +15,7 @@ function loadFinish(char){
             console.log(err);
         }
 
-        $( "img").click(function() {
+        $( ".img-modal").click(function() {
             let id = this.getAttribute("meta-id");
             modal.style.display = "block";
             char[id - 1].infoModal();
