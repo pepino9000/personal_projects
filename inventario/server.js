@@ -84,4 +84,4 @@ http
       res.end("Registro eliminado con éxito!");
       }
   })
-  .listen(3000);
+  .listen('https://pepino9000.github.io/personal_projects/inventario');

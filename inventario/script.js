@@ -1,4 +1,4 @@
-let url = "http://localhost:3000/cancion";
+let url = "https://pepino9000.github.io/personal_projects/inventario/cancion";
   let tbody = document.getElementById("cuerpo");
   let cancion = document.getElementById("cancion");
   let artista = document.getElementById("artista");
