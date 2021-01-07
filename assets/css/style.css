@@ -65,7 +65,7 @@ h2{
 }
 .box h3{
   font-size: 18px;
-  margin-top: 5px;
+  margin-top: 10px;
   text-align: center;
   font-weight: 500;
   color: #464F4F;
@@ -91,4 +91,7 @@ h2{
 }
 .subtitle{
   text-align: center;
+}
+.box > img{
+  width: 100%;
 }
