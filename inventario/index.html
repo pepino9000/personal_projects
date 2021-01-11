@@ -114,9 +114,7 @@
       </div>
     </div>
     <div id="ListaProductos">
-      <br>
-      <h2 class="danger">*Github pages no es compatible con servidores http. Se recomienda descargar el archivo y simularlo a través del comando "node server.js" y entrar a la siguiente ruta: http://localhost:3000/ para ver el CRUD en funcionamiento.</h2>
-      <br>
+      <br />
       <h2>Tabla de productos</h2>
 
       <div class="container pt-5 w-75">
@@ -155,13 +153,14 @@
     height: 40px;
     margin-right: 50px;
   }
-  .danger{
+  .danger {
     color: red;
   }
 </style>
 
 <script>
-  let url = "http://localhost:3000/producto";
+  const PORT = process.env.PORT || 5000;
+  let url = "http://localhost:5000/producto";
   let tbody = document.getElementById("cuerpo");
   let nombre = document.getElementById("nombre");
   let precio = document.getElementById("precio");
