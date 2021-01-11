@@ -114,7 +114,11 @@
       </div>
     </div>
     <div id="ListaProductos">
+<<<<<<< HEAD
       <br>
+=======
+      <br />
+>>>>>>> ab874cd325d7d979496c180241f1e716fdb8e546
       <h2>Tabla de productos</h2>
 
       <div class="container pt-5 w-75">
@@ -153,13 +157,14 @@
     height: 40px;
     margin-right: 50px;
   }
-  .danger{
+  .danger {
     color: red;
   }
 </style>
 
 <script>
-  let url = "http://localhost:3000/producto";
+  const PORT = process.env.PORT || 5000;
+  let url = "http://localhost:5000/producto";
   let tbody = document.getElementById("cuerpo");
   let nombre = document.getElementById("nombre");
   let precio = document.getElementById("precio");

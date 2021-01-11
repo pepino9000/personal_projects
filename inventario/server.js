@@ -6,6 +6,7 @@ const { consultar } = require("./consultas");
 const { editar } = require("./consultas");
 const { eliminar } = require("./consultas");
 const { consultarEntradas } = require("./consultas");
+const PORT = process.env.PORT || 5000;
 
 http
   .createServer(async (req, res) => {
@@ -56,7 +57,7 @@ http
         // Paso 2
         const datos = Object.values(JSON.parse(body));
         // Paso 3
-        console.log(datos)
+        console.log(datos);
         const respuesta = await insertar(datos);
         // Paso 4
         res.end(JSON.stringify(respuesta));
@@ -71,17 +72,17 @@ http
         const datos = Object.values(JSON.parse(body));
         // Paso 2
         const respuesta = await editar(datos);
-        console.log('Datos editables ' + respuesta)
+        console.log("Datos editables " + respuesta);
         res.end(JSON.stringify(respuesta));
       });
     }
     // // Paso 2
     if (req.url.startsWith("/producto?id=") && req.method == "DELETE") {
       const { id } = url.parse(req.url, true).query;
-      console.log(id)
+      console.log(id);
       await eliminar(id);
       res.statusCode = 200;
       res.end("Registro eliminado con éxito!");
-      }
+    }
   })
-  .listen(3000);
+  .listen(PORT);
