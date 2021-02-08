@@ -6,6 +6,7 @@ const { consultar } = require("./consultas");
 const { editar } = require("./consultas");
 const { eliminar } = require("./consultas");
 const { consultarEntradas } = require("./consultas");
+const { categorias } = require("./consultas");
 const PORT = process.env.PORT || 5000;
 
 http
@@ -40,6 +41,13 @@ http
       // Paso 2
       const registros = await consultar();
       // Paso 3
+      res.end(JSON.stringify(registros));
+    }
+    if (req.url == "/categorias" && req.method === "GET") {
+      // Paso 2
+      const registros = await categorias();
+      // Paso 3
+      console.log(registros);
       res.end(JSON.stringify(registros));
     }
     if (req.url == "/lista_entradas" && req.method === "GET") {

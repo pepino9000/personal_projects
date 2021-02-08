@@ -1,10 +1,10 @@
 const { Pool } = require("pg");
 const pool = new Pool({
-  user:"nyqttmpp",
-  host:"suleiman.db.elephantsql.com",
-  password:"bm8jxmz5liCwD6dmj5vJ-K5nsOGRwPMi",
-  port:5432,
-  database:"nyqttmpp",
+  user: "nyqttmpp",
+  host: "suleiman.db.elephantsql.com",
+  password: "bm8jxmz5liCwD6dmj5vJ-K5nsOGRwPMi",
+  port: 5432,
+  database: "nyqttmpp",
 });
 //postgres://nyqttmpp:bm8jxmz5liCwD6dmj5vJ-K5nsOGRwPMi@suleiman.db.elephantsql.com:5432/nyqttmpp
 // const pool = async config => {
@@ -91,7 +91,7 @@ const eliminar = async (id) => {
 const consultarEntradas = async () => {
   // Paso 2
   try {
-    const id = await pool.query("select id_productos from productos;")
+    const id = await pool.query("select id_productos from productos;");
     const result = await pool.query(
       "SELECT  to_char(fecha, 'YYYY-MM-DD HH24:MI:SS')as fecha, nombre, cantidad, (select sum(cantidad) from entradas where id_productos = productos.id_productos) - (select sum(cantidad) from salidas where id_productos = productos.id_productos)as stock FROM entradas JOIN productos ON entradas.id_productos=productos.id_productos"
     );
@@ -103,5 +103,24 @@ const consultarEntradas = async () => {
     return error;
   }
 };
-module.exports = { insertar, consultar, editar, eliminar, consultarEntradas };
+const categorias = async () => {
+  // Paso 2
+  try {
+    const result = await pool.query("SELECT * from categorias");
+    console.log(result);
+    return result;
+  } catch (error) {
+    // Paso 3
+    console.log(error.code);
+    return error;
+  }
+};
+module.exports = {
+  insertar,
+  consultar,
+  editar,
+  eliminar,
+  consultarEntradas,
+  categorias,
+};
 // , consultar, editar, eliminar

@@ -90,14 +90,9 @@
             </div>
           </div>
           <div class="form-group row">
-            <label for="rut" class="col-sm-2 col-form-label">Categoria:</label>
+            <label for="rut" class="col-sm-2 col-form-label">Categorias:</label>
             <div class="col-sm-10">
-              <input
-                type="text"
-                class="form-control"
-                id="id_categorias"
-                value="1"
-              />
+              <select class="form-control" id="id_categorias"></select>
             </div>
           </div>
           <button
@@ -162,7 +157,7 @@
 </style>
 
 <script>
-  const PORT = process.env.PORT || 5000;
+  // const PORT = process.env.PORT || 5000;
   let url = "http://localhost:5000/producto";
   let tbody = document.getElementById("cuerpo");
   let nombre = document.getElementById("nombre");
@@ -174,7 +169,7 @@
 
   let productos = [];
   window.onload = getData();
-
+  window.onload = getCategorias();
   async function getData() {
     await axios.get(url + "s").then((data) => {
       productos = data.data.rows;
@@ -208,7 +203,17 @@
     codigo.value = "";
     id_categorias.value = "";
   }
-
+  async function getCategorias() {
+    await axios.get("/categorias").then((data) => {
+      console.log(data.data.rows);
+      data.data.rows.forEach((e) => {
+        let option = document.createElement("option");
+        option.setAttribute("value", `${e.id_categorias}`);
+        option.textContent = `${e.nombre}`;
+        document.getElementById("id_categorias").append(option);
+      });
+    });
+  }
   function nuevoProducto() {
     nombre;
     precio;
