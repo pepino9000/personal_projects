@@ -1,25 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import PageLoading from "./components/PageLoading";
+import PageError from "./components/PageError";
+import UserList from "./components/UserList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    loading: true,
+    error: null,
+    data: null,
+  };
+
+  componentDidMount() {
+    this.fetchData();
+  }
+  fetchData = async () => {
+    this.setState({ loading: true, error: null });
+
+    try {
+      await fetch("https://0q27loouph.execute-api.us-east-1.amazonaws.com/")
+        .then((res) => res.json())
+        .then((res) => {
+          if (this.state.data == null) {
+            this.setState({ loading: false, data: [res] });
+          } else {
+            this.setState({ loading: false, data: [res] });
+          }
+        });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+
+  render() {
+    if (this.state.loading === true && !this.state.data) {
+      return <PageLoading />;
+    }
+    if (this.state.error) {
+      return <PageError error={this.state.error} />;
+    }
+    return (
+      <div className="container">
+        {" "}
+        <ul>
+          <UserList user={this.state.data} />
+        </ul>
+        <button onClick={this.fetchData}>Actualizar</button>
+      </div>
+    );
+  }
 }
 
 export default App;

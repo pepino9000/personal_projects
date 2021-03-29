@@ -1,0 +1,104 @@
+body {
+  background: linear-gradient(90deg, #fcab69 21px, transparent 1%) center,
+    linear-gradient(#f4a261 21px, transparent 1%) center, #fbca25;
+  background-size: 22px 22px;
+}
+.user {
+  margin: 20px auto;
+  padding: 15px;
+  width: 450px;
+  background-color: #f7f7f7;
+  height: 100px;
+  display: flex;
+  /*alínea los item de forma vertical*/
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 65px;
+}
+@media (max-width: 540px) {
+  .user {
+    width: 100%;
+    padding: 15px 0px;
+    font-size: 12px;
+  }
+  .container {
+    margin: 3%;
+  }
+  ul {
+    padding: 0px;
+  }
+  #root > div > ul > li > div > span.mail_logo,
+  #root > div > ul > li > div > span.phone_logo {
+    width: 1rem;
+    height: 1rem;
+    background-size: 1rem 1rem;
+  }
+  #root > div > ul > li > img {
+    height: 80px;
+    margin: 20px 10px 20px 20px;
+  }
+  #root > div > ul > li > div {
+    padding: 5px;
+  }
+}
+.user__img {
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.user__info {
+  padding: 15px;
+  list-style-type: none;
+}
+
+.mail_logo {
+  /*este parámetro muestra al logo*/
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../../images/email.png");
+  background-size: 1.5rem 1.5rem;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+.phone_logo {
+  /*este parámetro muestra al logo*/
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../../images/phone.png");
+  background-size: 1.5rem 1.5rem;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+.mail__text {
+  color: #1da1f2;
+}
+.phone__text {
+  color: #00a53f;
+}
+button {
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #f7f7f7;
+  border: solid #f4a261 one;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: solid 2px black;
+}
+button:hover {
+  background-color: #f4a261;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
