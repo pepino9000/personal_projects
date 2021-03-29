@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <title>Gráficos</title>
+  </head>
+  <style>
+    .xtainer{
+      margin: 3%;
+      height: 100%;
+      background-color: #16161b;
+    }
+    #myChart {
+      width: 100%;
+      height: 400px;
+      margin: 0;
+      padding: 3%;
+    }
+  </style>
+  <body>
+
+    <div class="container justify-content-center mt-2">
+      <div class="row">
+        <!-- <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData()">Data 1</button>
+        </div>
+        <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos2')">Data 2</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos3')">Data 3</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos4')">Data 4</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos5')">Data 5</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos6')">Data 6</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos7')">Data 7</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos8')">Data 8</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos9')">Data 9</button>
+        </div>     <div class="col-2 my-1">
+          <button class="btn btn-danger w-100" onclick="getData('datos10')">Data 10</button>
+        </div>      -->
+    </div>
+    <div class="xtainer" id="xtainer">
+    </div>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+<figure class="highcharts-figure">
+  <div id="container"></div>
+  <p class="highcharts-description">
+    Demonstrating a basic area chart, also known as a mountain chart.
+    Area charts are similar to line charts, but commonly used to visualize
+    volumes.
+  </p>
+</figure>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+  crossorigin="anonymous"
+  ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  <!-- <script>
+    let url = "http://localhost:3000/"
+    async function getData(text) {
+      console.log(text)
+      axios.post(url + "datos1", text).then(data =>{
+        let xtainer = document.getElementsByClassName("xtainer")[0]
+        while(xtainer.firstChild){
+          xtainer.removeChild(xtainer.firstChild);
+        }
+        let canva = document.createElement("canvas")
+        canva.setAttribute("id", "myChart")
+        xtainer.append(canva)
+
+        let ctx = document.getElementById("myChart")
+        console.log(data.data)
+
+var myChart = new Chart(ctx, {
+
+    type: 'line',
+    data: {
+        labels: data.data,
+        datasets: [{
+            label: false,
+            data: data.data,
+            backgroundColor: "transparent",
+            borderColor: [
+                "#25B1C2"
+            ],
+            borderWidth: 0.7
+        }]
+    },
+    options: {
+      legend: {
+            labels: {
+                // This more specific font property overrides the global property
+                fontColor: 'white'
+            }
+        },
+        animation: {
+            duration: 0 // general animation time
+        },
+        hover: {
+            animationDuration: 0 // duration of animations when hovering an item
+        },
+        intersect: true,
+        responsiveAnimationDuration: 0, // animation duration after a resize
+        scales: {
+            xAxes: [{
+               gridLines: {
+                  display: false
+               }
+               ,
+            //    },
+               ticks: {
+                fontColor: "white",
+
+            }
+            }],
+            yAxes: [{
+               gridLines: {
+                  display: false
+                },
+            //    },
+               ticks: {
+                fontColor: "white",
+
+            }
+            }]
+       }
+    }
+});
+      })}
+  </script> -->
+  <script>
+    let url = "http://localhost:3000/"
+    async function getData() {
+      await axios.get(url+"datos").then((data) => {
+         let xtainer = document.getElementsByClassName("xtainer")[0]
+        while(xtainer.firstChild){
+          xtainer.removeChild(xtainer.firstChild);
+        }
+        let canva = document.createElement("canvas")
+        canva.setAttribute("id", "myChart")
+        const chart = Highcharts.chart('xtainer', {
+          
+            chart: {
+                type: 'line',
+                events: {
+                  render: async function () {
+
+                await setTimeout(async function() {
+                    // set up the updating of the chart each second     
+                    console.log(chart)               
+                    var series1 = this.series[0].chart.series[0].data;
+                    var series2 = this.series[1].chart.series[0].data;
+                    var series3 = this.series[2].chart.series[0].data;    
+                    var series4 = this.series[3].chart.series[0].data;                  
+                    var series5 = this.series[4].chart.series[0].data;                  
+                    var series6 = this.series[5].chart.series[0].data;                  
+                    var series7 = this.series[6].chart.series[0].data;                  
+                    var series8 = this.series[7].chart.series[0].data;                  
+                    var series9 = this.series[8].chart.series[0].data;                  
+                    var series10 = this.series[9].chart.series[0].data;                  
+                    await axios.get(url+"datos").then(data => 
+                    setInterval(function () {                       
+                        series1.updatePoints(data.data.datos1)
+                        series2.updatePoints(data.data.datos2)
+                        series3.updatePoints(data.data.datos3)
+                        series4.updatePoints(data.data.datos4)
+                        series5.updatePoints(data.data.datos5)
+                        series6.updatePoints(data.data.datos6)
+                        series7.updatePoints(data.data.datos7)
+                        series8.updatePoints(data.data.datos8)
+                        series9.updatePoints(data.data.datos9)
+                        series10.updatePoints(data.data.datos10)
+                        chart.redraw();
+
+                    }))
+                  }, 1000)
+           }}
+            },
+            
+            title: {
+                text: 'Fruit Consumption'
+            },
+            xAxis: {
+                type:'datetime'
+            },
+            yAxis: {
+              min: 1,
+              startOnTick: false,
+                title: {
+                    text: 'Fruit eaten'
+                }
+            },
+            plotOptions: {
+            series: {
+                lineWidth: 0.5        }
+            },
+            series: [{
+                name: 'Datos1',
+                data: data.data.datos1
+            }, {
+                name: 'Datos2',
+                data: data.data.datos2
+            },
+            {
+                name: 'Datos3',
+                data: data.data.datos3
+            },
+            {
+                name: 'Datos4',
+                data: data.data.datos4
+            },
+            {
+                name: 'Datos5',
+                data: data.data.datos5
+            },
+            {
+                name: 'Datos6',
+                data: data.data.datos6
+            },
+            {
+                name: 'Datos7',
+                data: data.data.datos7
+            },
+            {
+                name: 'Datos8',
+                data: data.data.datos8
+            },
+            {
+                name: 'Datos9',
+                data: data.data.datos9
+            },
+            {
+                name: 'Datos10',
+                data: data.data.datos10
+            }]
+        });
+    })
+    }
+    getData()
+
+    function randomNumber(max, min) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+    async function postData() {
+        axios.post(url + "datos1", randomNumber(20,35));
+    }
+    setInterval(function() {
+          postData()
+          // getData()
+    }, 10000);
+
+  </script>
+</html>
+
+
