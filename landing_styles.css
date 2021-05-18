@@ -1,0 +1,202 @@
+.navbar-light .navbar-brand {
+  margin: auto;
+}
+.logo {
+  width: 100px;
+}
+.carousel-inner {
+  background-image: url("./IMG_1564.JPG");
+  background-size: cover;
+  height: 600px;
+  background-position: center;
+}
+.carousel-slider-img {
+  animation: fadeIn 2s;
+  -webkit-animation: fadeIn 2s;
+  -moz-animation: fadeIn 2s;
+  -o-animation: fadeIn 2s;
+  -ms-animation: fadeIn 2s;
+  display: block !important;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 150px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+table {
+  border: none;
+}
+td {
+  text-align: center;
+}
+th {
+  text-align: center;
+  width: 15%;
+}
+th:first-child {
+  width: 30%;
+}
+td p {
+  font-size: 18px;
+  margin-top: revert;
+}
+th p {
+  font-size: 20px;
+}
+#regForm {
+  background-color: #ffffff;
+  font-family: Raleway;
+  min-width: 300px;
+  margin-top: 60px;
+}
+
+h1 {
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+  background-color: white;
+}
+.pink {
+  background-color: #ffe7f3;
+}
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: hsl(0, 0%, 94%);
+}
+
+/* Hide all steps by default: */
+.tab {
+  height: 450px;
+  display: none;
+}
+
+button {
+  background-color: #f461ad;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+  width: 150px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  background-color: #f461ad;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  background-color: #f461ad;
+
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #f461ad;
+}
+.dark-pink {
+  color: #f461ad;
+}
+.thanks {
+  background-color: #ffdddd;
+  padding: 6% 20%;
+}
+.face-icon {
+  width: 70px;
+}
+.boton_encuesta_satisfaccion {
+  margin-top: 20px;
+}
+.steps-container {
+  padding: 10px 0px;
+  text-align: center;
+}
